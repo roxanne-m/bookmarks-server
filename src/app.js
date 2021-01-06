@@ -20,10 +20,10 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json()); // required to parse the json data in the body of the request
 
-app.use( (req, res, next) => {
-  // console.log(req);
-  next();
-});
+// app.use( (req, res, next) => {
+//   // console.log(req);
+//   next();
+// });
 
 app.use(function validateBearerToken(req, res, next) {
   const apiToken = process.env.API_TOKEN;
